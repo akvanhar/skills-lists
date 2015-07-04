@@ -68,9 +68,8 @@ def print_indeces(my_list):
     2 Volvo
 
     """
-
-    print "Nothing at all"
-
+    for entry in my_list:
+        print my_list.index(entry), entry
 
 def long_words(word_list):
     """Return all words in input list that are longer than 4 characters.
@@ -83,7 +82,12 @@ def long_words(word_list):
 
     """
 
-    return []
+    longer_word_list = []
+    for word in word_list:
+        if len(word) > 4:
+            longer_word_list.append(word)
+
+    return longer_word_list
 
 
 def smallest_int(number_list):
@@ -98,8 +102,11 @@ def smallest_int(number_list):
         True
 
     """
-
-    return 100
+    if number_list == []:
+        return None
+    else:
+        number_list.sort()
+        return number_list[0]
 
 
 def largest_int(number_list):
@@ -114,8 +121,11 @@ def largest_int(number_list):
         True
 
     """
-
-    return 0
+    if number_list == []:
+        return None
+    else:
+        number_list.sort()
+        return number_list[-1]
 
 
 def halvesies(number_list):
