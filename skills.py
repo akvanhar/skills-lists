@@ -252,22 +252,27 @@ def average(number_list):
 # END OF SKILLS TEST; YOU CAN STOP HERE OR YOU CAN WORK ON ADVANCED PROBLEMS
 
 
-# def advanced_join_strings(list_of_words):
-#     """Return a single string with each word from the input list
-#     separated by a comma.
-#
-#         >>> advanced_join_strings(["Labrador", "Poodle", "French Bulldog"])
-#         'Labrador, Poodle, French Bulldog'
-#
-#     If there's only one thing in the list, it should return just that
-#     thing, of course:
-#
-#         >>> advanced_join_strings(["Pretzel"])
-#         'Pretzel'
-#
-#     """
-#
-#     return ""
+def advanced_join_strings(list_of_words):
+     """Return a single string with each word from the input list
+     separated by a comma.
+
+         >>> advanced_join_strings(["Labrador", "Poodle", "French Bulldog"])
+         'Labrador, Poodle, French Bulldog'
+
+     If there's only one thing in the list, it should return just that
+     thing, of course:
+
+         >>> advanced_join_strings(["Pretzel"])
+         'Pretzel'
+
+     """
+    if len(list_of_words) == 0 or len(list_of_words) == 1:
+        return list_of_words
+    else:
+        together_with_coma = ""
+        for word in list_of_words:
+            together_with_coma = together_with_coma + word + ","
+            return together_with_coma
 
 
 ##############################################################################
