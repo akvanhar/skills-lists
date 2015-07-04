@@ -142,8 +142,7 @@ def halvesies(number_list):
     """
     list_of_halvesies = []
     for number in number_list:
-        if number % 2 == 0:
-            list_of_halvesies.append(number/2.0)
+        list_of_halvesies.append(number/2.0)
 
     return list_of_halvesies
 
@@ -155,8 +154,11 @@ def word_lengths(word_list):
         [5, 3, 5, 4]
 
     """
+    length_of_words = []
+    for word in word_list:
+        length_of_words.append(len(word))
 
-    return []
+    return length_of_words
 
 
 def sum_numbers(number_list):
@@ -174,8 +176,11 @@ def sum_numbers(number_list):
         0
 
     """
+    sum_list = 0
+    for num in number_list:
+        sum_list += num
 
-    return 0
+    return sum_list
 
 
 def mult_numbers(number_list):
@@ -196,8 +201,12 @@ def mult_numbers(number_list):
         1
 
     """
+    mult_list = 1
 
-    return 0
+    for num in number_list:
+        mult_list *= num
+
+    return mult_list
 
 
 def join_strings(word_list):
@@ -215,8 +224,11 @@ def join_strings(word_list):
         ''
 
     """
+    run_together = ""
+    for word in word_list:
+        run_together = run_together + word
 
-    return ""
+    return run_together
 
 
 def average(number_list):
@@ -228,8 +240,12 @@ def average(number_list):
     There is no defined answer if the list given is empty. It's fine if
     this raises an error when given an empty list.
     """
+    sum_list = 0.0
+    for num in number_list:
+        sum_list += num
+    average_list = sum_list/len(number_list)
 
-    return 0
+    return average_list
 
 
 ##############################################################################
